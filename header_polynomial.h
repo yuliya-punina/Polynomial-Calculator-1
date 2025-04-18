@@ -2,7 +2,6 @@
 #define HEADER_POLYNOMIAL_H
 
 const int Nmax = 100;
-const int max_degree = 10;
 
 struct Polynomial {
 	double coefficient;
@@ -10,8 +9,9 @@ struct Polynomial {
 };
 
 void PolynomialMenu();
-void PolynomialAddition();
-void PolynomialSubtraction();
+void InputPolynomial(Polynomial polynomials[Nmax][Nmax], int& num_of_polynomials, int sizes[Nmax]);
+void PolynomialAddition(Polynomial polynomials[Nmax][Nmax], int& num_of_polynomials, int sizes[Nmax]);
+void PolynomialSubtraction(Polynomial polynomials[Nmax][Nmax], int& num_of_polynomials, int sizes[Nmax]);
 void PolynomialMultiplication();
 void PolynomialScalarMultiplication();
 void PolynomialDivision();
