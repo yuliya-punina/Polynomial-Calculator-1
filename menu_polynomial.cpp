@@ -10,8 +10,10 @@ void PolynomialMenu() {
     //SetConsoleOutputCP(CP_UTF8);
     setlocale(LC_ALL, "Rus");
 
-    Polynomial polynomials[Nmax][Nmax];
+    Polynomial polynomials[Nmax][max_degree];
     int sizes[Nmax];
+    Polynomial result[Nmax * max_degree];
+    int rez_size = 0;
     int num_of_polynomials;
 
     int choice;
@@ -35,11 +37,11 @@ void PolynomialMenu() {
         switch (choice) {
         case 1:
             cout << "Выбрано сложение многочленов" << endl << endl;
-            PolynomialAddition(polynomials, num_of_polynomials, sizes);
+            PolynomialAddition(polynomials, num_of_polynomials, sizes, result, rez_size);
             break;
         case 2:
             cout << "Выбрано вычитание многочленов" << endl << endl;
-            PolynomialSubtraction(polynomials, num_of_polynomials, sizes);
+            PolynomialSubtraction(polynomials, num_of_polynomials, sizes, result, rez_size);
             break;
         case 3:
             PolynomialMultiplication();
