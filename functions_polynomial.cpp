@@ -6,7 +6,16 @@ using namespace std;
 
 
 void InputPolinomial() {
-	cout << "¬ведите степень многочлена"
+    cout << "¬ведите количество членов многочлена: ";
+    cin >> size;
+
+    for (int i = 0; i < size; i++) {
+        cout << "¬ведите коэффициент члена " << i + 1 << ": ";
+        cin >> polynomial[i].coefficient;
+
+        cout << "¬ведите степень x дл€ члена " << i + 1 << ": ";
+        cin >> polynomial[i].power;
+    }
 }
 
 

@@ -10,7 +10,9 @@ void PolynomialMenu() {
     //SetConsoleOutputCP(CP_UTF8);
     setlocale(LC_ALL, "Rus");
 
-    int choice = 0;
+
+
+    int choice;
     bool exit = false;
 
 
