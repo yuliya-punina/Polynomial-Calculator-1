@@ -10,8 +10,12 @@ struct Polynomial {
 };
 
 void PolynomialMenu();
+
 void InputPolynomial(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax]);
-void PrintPolynomial(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax]);
+void PrintPolynomial(Polynomial result[Nmax * max_degree], int& rez_size);
+
+void NullCoefficient(Polynomial result[Nmax * max_degree], int& rez_size, int& k);
+
 void PolynomialAddition(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],
 	Polynomial result[Nmax * max_degree], int& rez_size);
 void PolynomialSubtraction(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],

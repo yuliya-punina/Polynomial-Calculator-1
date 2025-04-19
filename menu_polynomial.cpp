@@ -38,6 +38,7 @@ void PolynomialMenu() {
         case 1:
             cout << "Выбрано сложение многочленов" << endl << endl;
             PolynomialAddition(polynomials, num_of_polynomials, sizes, result, rez_size);
+            PrintPolynomial(result, rez_size);
             break;
         case 2:
             cout << "Выбрано вычитание многочленов" << endl << endl;
