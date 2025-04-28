@@ -1,39 +1,39 @@
-#include "header_polynomial.h"
+п»ї#include "header_polynomial.h"
 #include <iostream>
 #include <iomanip>
 
 using namespace std;
 
 
-// ввод многочлена
+// РІРІРѕРґ РјРЅРѕРіРѕС‡Р»РµРЅР°
 void InputPolynomial(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax]) {
 
     do {
-        cout << "Введите количество многочленов (минимум 1): "; cin >> num_of_polynomials;
-        if (num_of_polynomials < 1) cout << "Неправильный ввод" << endl;
+        cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјРЅРѕРіРѕС‡Р»РµРЅРѕРІ (РјРёРЅРёРјСѓРј 1): "; cin >> num_of_polynomials;
+        if (num_of_polynomials < 1) cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ" << endl;
     } while (num_of_polynomials < 1);
 
     for (int i = 0; i < num_of_polynomials; i++) {
         do {
-            cout << "Введите количество членов " << i + 1 << "-го многочлена (минимум 2): "; cin >> sizes[i];
-            if (sizes[i] < 2) cout << "Неправильный ввод" << endl;
+            cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р»РµРЅРѕРІ " << i + 1 << "-РіРѕ РјРЅРѕРіРѕС‡Р»РµРЅР° (РјРёРЅРёРјСѓРј 2): "; cin >> sizes[i];
+            if (sizes[i] < 2) cout << "РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ РІРІРѕРґ" << endl;
         } while (sizes[i] < 2);
 
         
         for (int j = 0; j < sizes[i]; j++) {
             bool unique = true;
-            cout << "Член " << j + 1 << endl;
+            cout << "Р§Р»РµРЅ " << j + 1 << endl;
             do {
                 unique = true;
                 do {
-                    cout << setw(15) << "Cтепень x: "; cin >> polynomials[i][j].degree;
-                    if (polynomials[i][j].degree < 0) cout << "Степень не может быть меньше 0" << endl;
+                    cout << setw(15) << "CС‚РµРїРµРЅСЊ x: "; cin >> polynomials[i][j].degree;
+                    if (polynomials[i][j].degree < 0) cout << "РЎС‚РµРїРµРЅСЊ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РјРµРЅСЊС€Рµ 0" << endl;
                 } while (polynomials[i][j].degree < 0);
 
                 for (int k = 0; k < j; k++) {
                     if (polynomials[i][k].degree == polynomials[i][j].degree) {
-                        cout << "Степень " << polynomials[i][j].degree << " уже есть в многочлене. ";
-                        cout << "Введите другую степень." << endl;
+                        cout << "РЎС‚РµРїРµРЅСЊ " << polynomials[i][j].degree << " СѓР¶Рµ РµСЃС‚СЊ РІ РјРЅРѕРіРѕС‡Р»РµРЅРµ. ";
+                        cout << "Р’РІРµРґРёС‚Рµ РґСЂСѓРіСѓСЋ СЃС‚РµРїРµРЅСЊ." << endl;
                         unique = false;
                         break;
                     }
@@ -41,15 +41,15 @@ void InputPolynomial(Polynomial polynomials[Nmax][max_degree], int& num_of_polyn
             } while (!unique);
 
             do {
-                cout << setw(15) << "Коэффициент: "; cin >> polynomials[i][j].coefficient;
-                if (polynomials[i][j].coefficient == 0) cout << "Вводите информацию только о ненулевых членах многочлена" << endl;
+                cout << setw(15) << "РљРѕСЌС„С„РёС†РёРµРЅС‚: "; cin >> polynomials[i][j].coefficient;
+                if (polynomials[i][j].coefficient == 0) cout << "Р’РІРѕРґРёС‚Рµ РёРЅС„РѕСЂРјР°С†РёСЋ С‚РѕР»СЊРєРѕ Рѕ РЅРµРЅСѓР»РµРІС‹С… С‡Р»РµРЅР°С… РјРЅРѕРіРѕС‡Р»РµРЅР°" << endl;
             } while (polynomials[i][j].coefficient == 0);
         }
     }
 }
 
 
-// вывод многочлена
+// РІС‹РІРѕРґ РјРЅРѕРіРѕС‡Р»РµРЅР°
 void PrintPolynomial(Polynomial result[Nmax * max_degree], int& rez_size) {
 
     if (rez_size == 0) {
@@ -84,7 +84,7 @@ void PrintPolynomial(Polynomial result[Nmax * max_degree], int& rez_size) {
 }
 
 
-// удаление членов с нулевыми коэффициентами
+// СѓРґР°Р»РµРЅРёРµ С‡Р»РµРЅРѕРІ СЃ РЅСѓР»РµРІС‹РјРё РєРѕСЌС„С„РёС†РёРµРЅС‚Р°РјРё
 void NullCoefficient(Polynomial result[Nmax * max_degree], int& rez_size, int &k) {
 
     for (int i = k; i < rez_size - 1; i++) {
@@ -95,7 +95,7 @@ void NullCoefficient(Polynomial result[Nmax * max_degree], int& rez_size, int &k
 }
 
 
-// сортировка по убыванию
+// СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ СѓР±С‹РІР°РЅРёСЋ
 void Sort(Polynomial result[Nmax * max_degree], int rez_size) {
 
     for (int i = 0; i < rez_size - 1; i++) {
@@ -110,7 +110,7 @@ void Sort(Polynomial result[Nmax * max_degree], int rez_size) {
 }
 
 
-// сложение
+// СЃР»РѕР¶РµРЅРёРµ
 void PolynomialAddition(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax], 
     Polynomial result[Nmax * max_degree], int& rez_size) {
 
@@ -144,7 +144,7 @@ void PolynomialAddition(Polynomial polynomials[Nmax][max_degree], int& num_of_po
     Sort(result, rez_size);
 }
 
-// вычитание
+// РІС‹С‡РёС‚Р°РЅРёРµ
 void PolynomialSubtraction(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],
     Polynomial result[Nmax * max_degree], int& rez_size) {
 
@@ -179,7 +179,7 @@ void PolynomialSubtraction(Polynomial polynomials[Nmax][max_degree], int& num_of
     Sort(result, rez_size);
 }
 
-// умножение многочленов друг на друга
+// СѓРјРЅРѕР¶РµРЅРёРµ РјРЅРѕРіРѕС‡Р»РµРЅРѕРІ РґСЂСѓРі РЅР° РґСЂСѓРіР°
 void PolynomialMultiplication(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials,
     int sizes[Nmax], Polynomial result[Nmax * max_degree], int& rez_size) {
 
@@ -226,10 +226,10 @@ void PolynomialScalarMultiplication(Polynomial polynomials[Nmax][max_degree], in
 
     int scalar;
     InputPolynomial(polynomials, num_of_polynomials, sizes);
-    cout << "На какое число хотите умножить: "; cin >> scalar;
+    cout << "РќР° РєР°РєРѕРµ С‡РёСЃР»Рѕ С…РѕС‚РёС‚Рµ СѓРјРЅРѕР¶РёС‚СЊ: "; cin >> scalar;
 
     if (scalar == 0) {
-        cout << "Результат: 0" << endl;
+        cout << "Р РµР·СѓР»СЊС‚Р°С‚: 0" << endl;
     }
     else {
         for (int i = 0; i < num_of_polynomials; i++) {
@@ -247,11 +247,11 @@ void PolynomialScalarMultiplication(Polynomial polynomials[Nmax][max_degree], in
     Sort(result, rez_size);
 }
 
-// деление в столбик
+// РґРµР»РµРЅРёРµ РІ СЃС‚РѕР»Р±РёРє
 void PolynomialDivision(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],
     Polynomial result[Nmax * max_degree], int& rez_size) {
 
-    cout << "Первый многочлен делится на второй" << endl;
+    cout << "РџРµСЂРІС‹Р№ РјРЅРѕРіРѕС‡Р»РµРЅ РґРµР»РёС‚СЃСЏ РЅР° РІС‚РѕСЂРѕР№" << endl;
     InputPolynomial(polynomials, num_of_polynomials, sizes);
 
     Polynomial delimoe[Nmax * max_degree];
@@ -315,13 +315,13 @@ void PolynomialDivision(Polynomial polynomials[Nmax][max_degree], int& num_of_po
         ostat[i] = delimoe[i];
     }
 
-    cout << "Частное: ";
+    cout << "Р§Р°СЃС‚РЅРѕРµ: ";
     PrintPolynomial(chastnoe, chastnoe_size);
-    cout << "Остаток: ";
+    cout << "РћСЃС‚Р°С‚РѕРє: ";
     PrintPolynomial(ostat, ostat_size);
 }
 
-// производная
+// РїСЂРѕРёР·РІРѕРґРЅР°СЏ
 void PolynomialDerivative(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],
     Polynomial result[Nmax * max_degree], int& rez_size) {
 

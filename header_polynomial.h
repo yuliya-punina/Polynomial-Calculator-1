@@ -1,4 +1,4 @@
-#ifndef HEADER_POLYNOMIAL_H
+п»ї#ifndef HEADER_POLYNOMIAL_H
 #define HEADER_POLYNOMIAL_H
 
 const int Nmax = 10;
@@ -9,18 +9,18 @@ struct Polynomial {
 	double coefficient;
 };
 
-// меню
+// РјРµРЅСЋ
 void PolynomialMenu();
 
-// ввод вывод
+// РІРІРѕРґ РІС‹РІРѕРґ
 void InputPolynomial(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax]);
 void PrintPolynomial(Polynomial result[Nmax * max_degree], int& rez_size);
 
-// манипуляции с массивом
+// РјР°РЅРёРїСѓР»СЏС†РёРё СЃ РјР°СЃСЃРёРІРѕРј
 void NullCoefficient(Polynomial result[Nmax * max_degree], int& rez_size, int& k);
 void Sort(Polynomial result[Nmax * max_degree], int rez_size);
 
-// функции калькулятора
+// С„СѓРЅРєС†РёРё РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР°
 void PolynomialAddition(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],
 	Polynomial result[Nmax * max_degree], int& rez_size);
 void PolynomialSubtraction(Polynomial polynomials[Nmax][max_degree], int& num_of_polynomials, int sizes[Nmax],

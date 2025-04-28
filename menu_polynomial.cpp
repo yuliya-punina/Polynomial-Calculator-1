@@ -1,4 +1,4 @@
-#include "header_polynomial.h"
+ï»¿#include "header_polynomial.h"
 #include <iostream>
 //#include <Windows.h>
 #include <locale.h>
@@ -23,53 +23,53 @@ void PolynomialMenu() {
     while (!exit) {
 
         cout << endl;
-        cout << "ÊÀËÜÊÓËßÒÎÐ ÌÍÎÃÎ×ËÅÍÎÂ" << endl;
-        cout << "1. Ñëîæåíèå ìíîãî÷ëåíîâ" << endl;
-        cout << "2. Âû÷èòàíèå ìíîãî÷ëåíîâ" << endl;
-        cout << "3. Óìíîæåíèå ìíîãî÷ëåíîâ äðóã íà äðóãà" << endl;
-        cout << "4. Óìíîæåíèå ìíîãî÷ëåíà íà ÷èñëî" << endl;
-        cout << "5. Äåëåíèå ìíîãî÷ëåíîâ â ñòîëáèê" << endl;
-        cout << "6. Âû÷èñëåíèå ïðîèçâîäíîé ìíîãî÷ëåíà" << endl;
-        cout << "0. Âåðíóòüñÿ â ãëàâíîå ìåíþ" << endl << endl;
-        cout << "Âûáåðèòå äåéñòâèå (0-6): "; cin >> choice;
+        cout << "ÐšÐÐ›Ð¬ÐšÐ£Ð›Ð¯Ð¢ÐžÐ  ÐœÐÐžÐ“ÐžÐ§Ð›Ð•ÐÐžÐ’" << endl;
+        cout << "1. Ð¡Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð²" << endl;
+        cout << "2. Ð’Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð²" << endl;
+        cout << "3. Ð£Ð¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð´Ñ€ÑƒÐ³ Ð½Ð° Ð´Ñ€ÑƒÐ³Ð°" << endl;
+        cout << "4. Ð£Ð¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð° Ð½Ð° Ñ‡Ð¸ÑÐ»Ð¾" << endl;
+        cout << "5. Ð”ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð² ÑÑ‚Ð¾Ð»Ð±Ð¸Ðº" << endl;
+        cout << "6. Ð’Ñ‹Ñ‡Ð¸ÑÐ»ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð½Ð¾Ð¹ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð°" << endl;
+        cout << "0. Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ Ð² Ð³Ð»Ð°Ð²Ð½Ð¾Ðµ Ð¼ÐµÐ½ÑŽ" << endl << endl;
+        cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ (0-6): "; cin >> choice;
         cout << endl;
 
         switch (choice) {
         case 1:
-            cout << "Âûáðàíî ñëîæåíèå ìíîãî÷ëåíîâ" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ ÑÐ»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð²" << endl << endl;
             PolynomialAddition(polynomials, num_of_polynomials, sizes, result, rez_size);
-            cout << "Ðåçóëüòàò: " << endl;
+            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << endl;
             PrintPolynomial(result, rez_size);
             break;
         case 2:
-            cout << "Âûáðàíî âû÷èòàíèå ìíîãî÷ëåíîâ" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ Ð²Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð²" << endl << endl;
             PolynomialSubtraction(polynomials, num_of_polynomials, sizes, result, rez_size);
-            cout << "Ðåçóëüòàò: " << endl;
+            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << endl;
             PrintPolynomial(result, rez_size);
             break;
         case 3:
-            cout << "Âûáðàíî óìíîæåíèå ìíîãî÷ëåíîâ äðóã íà äðóãà" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð¾Ð² Ð´Ñ€ÑƒÐ³ Ð½Ð° Ð´Ñ€ÑƒÐ³Ð°" << endl << endl;
             PolynomialMultiplication(polynomials, num_of_polynomials, sizes, result, rez_size);
-            cout << "Ðåçóëüòàò: " << endl;
+            cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << endl;
             PrintPolynomial(result, rez_size);
             break;
         case 4:
-            cout << "Âûáðàíî óìíîæåíèå ìíîãî÷ëåíà íà ÷èñëî" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ ÑƒÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¾Ñ‡Ð»ÐµÐ½Ð° Ð½Ð° Ñ‡Ð¸ÑÐ»Ð¾" << endl << endl;
             PolynomialScalarMultiplication(polynomials, num_of_polynomials, sizes, result, rez_size);
             break;
         case 5:
-            cout << "Âûáðàíî äåëåíèå â ñòîëáèê" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð¾ Ð´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚Ð¾Ð»Ð±Ð¸Ðº" << endl << endl;
             PolynomialDivision(polynomials, num_of_polynomials, sizes, result, rez_size);
             break;
         case 6:
-            cout << "Âûáðàíà ïðîèçâîäíàÿ" << endl << endl;
+            cout << "Ð’Ñ‹Ð±Ñ€Ð°Ð½Ð° Ð¿Ñ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð½Ð°Ñ" << endl << endl;
             PolynomialDerivative(polynomials, num_of_polynomials, sizes, result, rez_size);
             break;
         case 0:
             exit = true;
             break;
         default:
-            cout << "Ïóíêòà ñ òàêèì íîìåðîì íåò!" << endl;
+            cout << "ÐŸÑƒÐ½ÐºÑ‚Ð° Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð¼ Ð½ÐµÑ‚!" << endl;
         }
         cout << endl;
     }

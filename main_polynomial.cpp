@@ -1,4 +1,4 @@
-#include "header_polynomial.h"
+﻿#include "header_polynomial.h"
 
 int main() {
     PolynomialMenu();
