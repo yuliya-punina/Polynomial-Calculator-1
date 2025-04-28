@@ -1,8 +1,8 @@
 ﻿#ifndef HEADER_POLYNOMIAL_H
 #define HEADER_POLYNOMIAL_H
 
-const int Nmax = 10;
-const int max_degree = 20;
+#define Nmax 10
+#define max_degree 20
 
 struct Polynomial {
 	int degree;
